@@ -8,6 +8,9 @@ import Home from './components/home';
 import Write from './components/write';
 import Emotion from './components/emotion';
 import Privacy from './components/privacy';
+import Connect from './components/connect';
+import Speaker from './components/speaker';
+import Company from './components/company';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -18,6 +21,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Connect" component={Connect} options={{headerShown:false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
         <Stack.Screen name="Write" component={Write} options={{headerShown:false}}/>
         <Stack.Screen name="Emotion" component={Emotion} options={{headerShown:false}}/>
@@ -25,6 +29,9 @@ export default function App() {
 
         <Stack.Screen name="Read" component={Read} options={{headerShown:false}}/>
         <Stack.Screen name="ScreenOne" component={ScreenOne} options={{headerShown:false}}/>
+
+        <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
+        <Stack.Screen name="Company" component={Company} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>
