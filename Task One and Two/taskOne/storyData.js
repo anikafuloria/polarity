@@ -8,7 +8,7 @@ export default function StoryData(navigation) {
     {
       id: '1',
       timeStamp: '2:12 PM, November 1, 2022',
-      name: 'My Awful Internship Exeperience',
+      name: 'My Awful Internship Experience',
       nickname: 'Bannana',
       diagnosisStatus: 'Diagnosed 3 years ago',
     },

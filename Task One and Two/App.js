@@ -11,6 +11,8 @@ import Privacy from './components/privacy';
 import Connect from './components/connect';
 import Speaker from './components/speaker';
 import Company from './components/company';
+import OneOnOnes from './components/oneonones';
+import Person from './components/person';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,6 +24,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Connect" component={Connect} options={{headerShown:false}}/>
+        <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
+        <Stack.Screen name="Company" component={Company} options={{headerShown:false}}/>
+        <Stack.Screen name="OneOnOnes" component={OneOnOnes} options={{headerShown:false}}/>
+        <Stack.Screen name="Person" component={Person} options={{headerShown:false}}/>
+
         <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
         <Stack.Screen name="Write" component={Write} options={{headerShown:false}}/>
         <Stack.Screen name="Emotion" component={Emotion} options={{headerShown:false}}/>
@@ -29,10 +36,6 @@ export default function App() {
 
         <Stack.Screen name="Read" component={Read} options={{headerShown:false}}/>
         <Stack.Screen name="ScreenOne" component={ScreenOne} options={{headerShown:false}}/>
-
-        <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
-        <Stack.Screen name="Company" component={Company} options={{headerShown:false}}/>
-
       </Stack.Navigator>
     </NavigationContainer>
   );
