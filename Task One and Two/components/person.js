@@ -10,19 +10,23 @@ import { Entypo } from '@expo/vector-icons';
 export default function Body ({ navigation }) {
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigation.navigate('Speaker')}>
-        <View style={styles.oneonone}>
-          <Text style={{fontSize: 20}}> 1-on-1 </Text>
-          <Text style={{fontSize: 20}}> Meet others with bipolar disorder. </Text>
-        </View>
-      </Pressable>
-
-      <Pressable onPress={() => navigation.navigate('Speaker')}>
-        <View style={styles.speaker}>
-          <Text style={{fontSize: 20}}> Speaker </Text>
-          <Text style={{fontSize: 20}}> Share your experience with others. </Text>
-        </View>
-      </Pressable>
+      <Text style={styles.bio}>
+        Zander is a Senior Software Engineer at Orange. He graduated from Carvard University with a B.A. in Smart Fistory. He was diagnosed with Type I Bipolar Disorder (Mania) at age 16.
+      </Text>
+      <View style={{flexDirection:"row"}}>
+        <Text style={styles.advice}>
+          Advice On:
+          Accomodations
+          Managing Mania
+          Leadership
+        </Text>
+        <Text style={styles.hobbies}>
+          Hobbies:
+          Foodie
+          Basketball
+          Reading
+        </Text>
+      </View>
     </View>
   );
 }
@@ -34,22 +38,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#CFDDA8',
     paddingBottom: 300,
   },
-  ononone: {
-    backgroundColor: '#E1EAC7',
-    borderRadius: 10,
-    height: 125,
-    width: 130,
-    alignItems: 'center',
-    paddingTop: 20,
+  bio: {
+    backgroundColor: 'white',
+    alignSelf: 'flex-start',
+    marginTop: 100,
   },
-  speaker: {
-    backgroundColor: '#E1EAC7',
-    borderRadius: 10,
-    height: 125,
-    width: 130,
-    marginTop: 48,
-    alignItems: 'center',
-    paddingTop: 20,
+  advice: {
+    backgroundColor: 'white',
+    alignSelf: 'flex-start',
+    width: 180,
+    marginTop: 120,
+  },
+  hobbies: {
+    backgroundColor: 'white',
+    alignSelf: 'flex-start',
+    width: 180,
+    marginTop: 120,
   },
 
 });
