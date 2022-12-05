@@ -23,9 +23,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Connect" component={Connect} options={{headerShown:false}}/>
-        <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
         <Stack.Screen name="Company" component={Company} options={{headerShown:false}}/>
+        <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
+        <Stack.Screen name="Connect" component={Connect} options={{headerShown:false}}/>
+
         <Stack.Screen name="OneOnOnes" component={OneOnOnes} options={{headerShown:false}}/>
         <Stack.Screen name="Person" component={Person} options={{headerShown:false}}/>
 

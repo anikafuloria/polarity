@@ -1,19 +1,41 @@
-import {View, Text, StyleSheet, Image, Button, Pressable} from "react-native";
+import React from "react";
+import { View, Text, StyleSheet, Image, Button, Pressable, TextInput } from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 
 export default function Body ({ navigation }) {
+  const [text, onChangeText] = React.useState("Useless Text");
+  const [number, onChangeNumber] = React.useState(null);
+
   return (
     <View style={styles.container}>
-      <View style={styles.oneonone}>
-        <Text style={{fontSize: 20}}> 1-on-1 </Text>
-        <Text style={{fontSize: 20}}> Meet others with bipolar disorder. </Text>
-      </View>
+      <Text style={{fontSize: 20}}>Why are you interested in collaborating with Dalesforce?</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Type here."
+        keyboardType="numeric"
+      />
 
-      <Pressable onPress={() => navigation.navigate('Speaker')}>
-        <View style={styles.speaker}>
-          <Text style={{fontSize: 20}}> Speaker </Text>
-          <Text style={{fontSize: 20}}> Share your experience with others. </Text>
+      <Text style={{fontSize: 20}}>What story do you want to share?</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Type here."
+        keyboardType="numeric"
+      />
+
+      <Pressable onPress={() => navigation.navigate('Home')}>
+        <View style={styles.shareButton}>
+          <Text style={{fontSize: 20}}>Share Profile and Confirm</Text>
+        </View>
+      </Pressable>
+
+      <Pressable onPress={() => navigation.navigate('Home')}>
+        <View style={styles.updateButton}>
+          <Text style={{fontSize: 20}}>Update Profile and Confirm</Text>
         </View>
       </Pressable>
     </View>
@@ -21,28 +43,36 @@ export default function Body ({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  input: {
+    width: 350,
+    height: 180,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    backgroundColor: '#FFFFFF',
+  },
   container: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#CFDDA8',
     paddingBottom: 300,
   },
-  ononone: {
-    backgroundColor: '#E1EAC7',
+  shareButton: {
+    backgroundColor: '#772D8B',
     borderRadius: 10,
-    height: 125,
-    width: 130,
+    height: 56,
+    width: 350,
+    marginTop: 8,
     alignItems: 'center',
     paddingTop: 20,
   },
-  speaker: {
-    backgroundColor: '#E1EAC7',
+  updateButton: {
+    backgroundColor: '#FFFFFF',
     borderRadius: 10,
-    height: 125,
-    width: 130,
-    marginTop: 48,
+    height: 56,
+    width: 350,
+    marginTop: 8,
     alignItems: 'center',
     paddingTop: 20,
   },
-
 });

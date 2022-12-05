@@ -5,17 +5,17 @@ import { Entypo } from '@expo/vector-icons';
 export default function Body ({ navigation }) {
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => navigation.navigate('Speaker')}>
-        <View style={styles.oneonone}>
-          <Text style={{fontSize: 20}}> 1-on-1 </Text>
-          <Text style={{fontSize: 20}}> Meet others with bipolar disorder. </Text>
+      <Pressable onPress={() => navigation.navigate('OneOnOnes')}>
+        <View style={styles.speaker}>
+          <Text style={{fontSize: 20}}>1-on-1</Text>
+          <Text style={{fontSize: 20}}>Meet others with bipolar disorder</Text>
         </View>
       </Pressable>
 
       <Pressable onPress={() => navigation.navigate('Speaker')}>
         <View style={styles.speaker}>
-          <Text style={{fontSize: 20}}> Speaker </Text>
-          <Text style={{fontSize: 20}}> Share your experience with others. </Text>
+          <Text style={{fontSize: 20}}>Speaker</Text>
+          <Text style={{fontSize: 20}}>Share your experience with others.</Text>
         </View>
       </Pressable>
     </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     paddingBottom: 300,
   },
   ononone: {
-    backgroundColor: '#E1EAC7',
+    backgroundColor: '#FFFFFF',
     borderRadius: 10,
     height: 125,
     width: 130,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   speaker: {
-    backgroundColor: '#E1EAC7',
+    backgroundColor: '#FFFFFF',
     borderRadius: 10,
     height: 125,
     width: 130,
