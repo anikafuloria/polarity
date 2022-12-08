@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 const Footer = ({navigation}) => {
   return <View style={styles.container}>
 
-    <Pressable onPress={() => navigation.navigate('Write')}>
+    <Pressable onPress={() => navigation.navigate('Home')}>
       <View style={styles.item}>
         <Entypo name="pencil" size={24} color="black" style = {styles.icons}/>
         <Text style={styles.text}> Post </Text>
