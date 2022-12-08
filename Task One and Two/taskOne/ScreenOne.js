@@ -8,17 +8,18 @@ import Footer from '../components/footer';
 export default function ScreenOne({ navigation }) {
   return (
     <View style={styles.container}>
-      <HeaderTwo/>
-
+      <View style={styles.header}>
+        <HeaderTwo/>
+      </View>
       <View style={styles.main}>
         <View style={styles.filter}>
           <Button title="Filter" onPress={() => navigation.navigate('Home')}/>
         </View>
         <View style={styles.story}>
-          <StoryData/>
+          <StoryData navigation={navigation}/>
         </View>
       </View>
-      <Footer/>
+      <Footer navigation={navigation}/>
     </View>
   );
 }
@@ -28,6 +29,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#CFDDA8',
+  },
+  header: {
+    paddingTop: 60,
+    marginTop: 20,
+    height: 200,
   },
   main: {
     flex: 1,

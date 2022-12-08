@@ -5,11 +5,13 @@ import { AntDesign } from '@expo/vector-icons';
 export default function Read ({ navigation }) {
   return (
     <View style={styles.container}>
+    <View style={styles.back}>
+      <Pressable onPress={() => navigation.navigate('Write')}>
+        <AntDesign name="back" size={24} color="black" />
+      </Pressable>
+    </View>
       <View style={styles.whole}>
         <View style={styles.top}>
-          <Pressable onPress={() => navigation.navigate('Write')}>
-            <AntDesign name="back" size={24} color="black" />
-          </Pressable>
           <Image source={require("../assets/PandaHeader.png")}/>
         </View>
         <Text style={styles.title}>What emotions does this story describe? </Text>
@@ -58,7 +60,7 @@ export default function Read ({ navigation }) {
           <Button title="Continue" onPress={() => navigation.navigate('Privacy')}/>
         </View>
       </View>
-      <Footer/>
+      <Footer navigation={navigation}/>
     </View>
   );
 }
@@ -67,6 +69,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#CFDDA8',
+  },
+  back: {
+    paddingTop: 40,
+    paddingLeft: 20,
   },
   panda: {
     alignItems: 'center',
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
   whole: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 60,
+    paddingTop: 10,
     backgroundColor: '#CFDDA8',
     padding: 8,
   },

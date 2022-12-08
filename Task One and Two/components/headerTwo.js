@@ -8,7 +8,7 @@ const HeaderTwo = () => {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/PandaHeader.png")} style = {styles.panda}/>
-      
+
       <TextInput
         style={styles.textInput}
         value={text} // the text variable in the state is displayed by the TextInput
@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 60,
     backgroundColor: '#CFDDA8',
     padding: 8,
   },

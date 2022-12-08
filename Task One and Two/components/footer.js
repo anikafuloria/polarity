@@ -1,24 +1,31 @@
-import {View, Text, StyleSheet, Image} from "react-native"
+import {View, Text, StyleSheet, Image, Pressable} from "react-native"
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-const Footer = () => {
+const Footer = ({navigation}) => {
   return <View style={styles.container}>
-    <View style={styles.item}>
-      <Entypo name="pencil" size={24} color="black" style = {styles.icons}/>
-      <Text style={styles.text}> Post </Text>
-    </View>
 
-    <View style={styles.item}>
-      <FontAwesome5 name="book-reader" size={24} color="black" style = {styles.icons}/>
-      <Text style={styles.text}> Read </Text>
-    </View>
+    <Pressable onPress={() => navigation.navigate('Write')}>
+      <View style={styles.item}>
+        <Entypo name="pencil" size={24} color="black" style = {styles.icons}/>
+        <Text style={styles.text}> Post </Text>
+      </View>
+    </Pressable>
 
-    <View style={styles.item}>
-      <Ionicons name="people" size={30} color="black" style = {styles.icons}/>
-      <Text style={styles.text}> Connect </Text>
-    </View>
+    <Pressable onPress={() => navigation.navigate('ScreenOne')}>
+      <View style={styles.item}>
+        <FontAwesome5 name="book-reader" size={24} color="black" style = {styles.icons}/>
+        <Text style={styles.text}> Read </Text>
+      </View>
+    </Pressable>
+
+    <Pressable onPress={() => navigation.navigate('Connect')}>
+      <View style={styles.item}>
+        <Ionicons name="people" size={30} color="black" style = {styles.icons}/>
+        <Text style={styles.text}> Connect </Text>
+      </View>
+    </Pressable>
 
     <View style={styles.item}>
       <Ionicons name="person-circle" size={30} color="black" style = {styles.icons}/>

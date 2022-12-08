@@ -6,17 +6,21 @@ import React, { useState } from 'react';
 
 export default function Write ({ navigation }) {
   const [text, setText] = useState("");
-
+  console.log(navigation)
   return (
     <View style={styles.container}>
-        <View style={styles.top}>
+        <View style={styles.back}>
           <Pressable onPress={() => navigation.navigate('Home')}>
-              <AntDesign name="back" size={24} color="black" />
+            <AntDesign name="back" size={24} color="black" />
           </Pressable>
+        </View>
+
+        <View style={styles.top}>
           <HeaderTwo />
         </View>
         <View style={styles.whole}>
         <TextInput
+          multiline={true}
           style={styles.textInput}
           value={text} // the text variable in the state is displayed by the TextInput
           placeholder=""
@@ -31,7 +35,7 @@ export default function Write ({ navigation }) {
           <Button title="Continue" onPress={() => navigation.navigate('Emotion')}/>
         </View>
       </View>
-      <Footer/>
+      <Footer navigation={navigation}/>
     </View>
   );
 }
@@ -40,6 +44,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#CFDDA8',
+  },
+  back: {
+    paddingTop: 40,
+    paddingLeft: 20,
   },
   top: {
     flexDirection: 'row',
@@ -50,7 +58,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 60,
     backgroundColor: '#CFDDA8',
-    padding: 8,
   },
   caption: {
     paddingLeft: 5,
@@ -63,7 +70,7 @@ const styles = StyleSheet.create({
     height: 400,
     padding: 8,
     backgroundColor: 'white',
-    marginTop:0,
+    justifyContent: 'center',
   },
   draft: {
     backgroundColor: '#C6C6C6',

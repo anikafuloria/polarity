@@ -1,5 +1,6 @@
 import {View, Text, StyleSheet, Image, Button, Pressable} from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
+import Footer from '../components/footer';
 import { Entypo } from '@expo/vector-icons';
 
 export default function Body ({ navigation }) {
@@ -18,6 +19,7 @@ export default function Body ({ navigation }) {
           <Text style={{fontSize: 20}}>Share your experience with others.</Text>
         </View>
       </Pressable>
+      <Footer navigation={navigation}/>
     </View>
   );
 }

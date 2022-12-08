@@ -25,7 +25,7 @@ export default function Home ({ navigation }) {
           </View>
         </View>
 
-        <Footer />
+      <Footer navigation={navigation}/>
       </View>
   );
 }

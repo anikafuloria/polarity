@@ -23,6 +23,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
         <Stack.Screen name="Person" component={Person} options={{headerShown:false}}/>
         <Stack.Screen name="OneOnOnes" component={OneOnOnes} options={{headerShown:false}}/>
 
@@ -30,7 +31,6 @@ export default function App() {
         <Stack.Screen name="Speaker" component={Speaker} options={{headerShown:false}}/>
         <Stack.Screen name="Connect" component={Connect} options={{headerShown:false}}/>
 
-        <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
         <Stack.Screen name="Write" component={Write} options={{headerShown:false}}/>
         <Stack.Screen name="Emotion" component={Emotion} options={{headerShown:false}}/>
         <Stack.Screen name="Privacy" component={Privacy} options={{headerShown:false}}/>

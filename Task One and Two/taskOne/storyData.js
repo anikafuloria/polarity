@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 
 import StoryItem from './StoryItem';
 
-export default function StoryData(navigation) {
+export default function StoryData({navigation}) {
   const storyListData = [
     {
       id: '1',

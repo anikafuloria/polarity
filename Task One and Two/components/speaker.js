@@ -16,7 +16,7 @@ export default function Body ({ navigation }) {
           <CompanyData/>
         </View>
       </View>
-      <Footer/>
+      <Footer navigation={navigation}/>
     </View>
   );
 }
