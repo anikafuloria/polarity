@@ -9,7 +9,9 @@ import Footer from './footer';
 export default function Body ({ navigation }) {
   return (
     <View style={styles.container}>
-      <HeaderTwo/>
+      <View style={styles.panda}>
+        <Image source={require("../assets/PandaHeader.png")}/>
+      </View>
 
       <View style={styles.main}>
         <View style={styles.story}>
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#CFDDA8',
-    paddingBottom: 400,
+    paddingBottom: 500,
   },
   filter: {
     backgroundColor: 'gray',
@@ -41,5 +43,13 @@ const styles = StyleSheet.create({
   story: {
     width: 330,
     height: 450,
-  }
+  },
+  panda: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: 60,
+    backgroundColor: '#CFDDA8',
+    padding: 8,
+    paddingBottom: 10,
+  },
 });
